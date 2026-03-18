@@ -1,9 +1,13 @@
 import { Platform } from 'react-native';
 
-// Use 10.0.2.2 for Android emulator, localhost for iOS/web
-const BASE = Platform.OS === 'android'
+const API_PROD = 'https://ecomove-api.victoriousstone-478a0c94.eastus.azurecontainerapps.io/api';
+
+const DEV_BASE = Platform.OS === 'android'
   ? 'http://10.0.2.2:3001/api'
   : 'http://localhost:3001/api';
+
+const USE_PROD = true;
+const BASE = USE_PROD ? API_PROD : DEV_BASE;
 
 let _token: string | null = null;
 
