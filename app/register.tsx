@@ -93,7 +93,7 @@ export default function RegisterScreen() {
               <MaterialIcons name="bolt" size={28} color={Colors.primary} />
             </View>
             <Text style={styles.brandName}>
-              EcoMove <Text style={styles.brandAccent}>App</Text>
+              EcoDrive <Text style={styles.brandAccent}>App</Text>
             </Text>
           </View>
 

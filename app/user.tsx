@@ -461,7 +461,7 @@ export default function UserScreen() {
   }, []);
 
   const cyclePayment = useCallback(() => {
-    const opts = ['Tarjeta **** 4242', 'Efectivo', 'Wallet EcoMove'];
+    const opts = ['Tarjeta **** 4242', 'Efectivo', 'Wallet EcoDrive'];
     const idx = (opts.indexOf(payment) + 1) % opts.length;
     setPayment(opts[idx]); showToast(`Pago: ${opts[idx]}`);
   }, [payment]);
@@ -488,7 +488,7 @@ export default function UserScreen() {
   };
   const tripSubMap: Record<TripStatus, string> = {
     idle: '', searching: 'Asignación inteligente', assigned: 'Va en camino a tu ubicación',
-    pickup: 'Puedes iniciar el viaje', ontrip: 'Rumbo al destino', completed: 'Gracias por usar EcoMove',
+    pickup: 'Puedes iniciar el viaje', ontrip: 'Rumbo al destino', completed: 'Gracias por usar EcoDrive',
   };
   const tripStateMap: Record<TripStatus, string> = {
     idle: '—', searching: 'Matching', assigned: 'En camino (pickup)',
@@ -507,7 +507,7 @@ export default function UserScreen() {
               <MaterialIcons name="bolt" size={20} color={Colors.primary} />
             </View>
             <Text style={styles.brandText}>
-              EcoMove <Text style={{ color: Colors.primary }}>App</Text>
+              EcoDrive <Text style={{ color: Colors.primary }}>App</Text>
             </Text>
           </View>
           <View style={{ flexDirection: 'row', alignItems: 'center', gap: 10 }}>
@@ -552,7 +552,7 @@ export default function UserScreen() {
             <MaterialIcons name="eco" size={32} color={Colors.primary} />
             <View style={{ flex: 1 }}>
               <Text style={styles.promoTitle}>Movilidad 100% eléctrica</Text>
-              <Text style={styles.promoSub}>Cada viaje es cero emisiones. Elige EcoMove.</Text>
+              <Text style={styles.promoSub}>Cada viaje es cero emisiones. Elige EcoDrive.</Text>
             </View>
           </View>
         </ScrollView>
@@ -576,7 +576,7 @@ export default function UserScreen() {
               <MaterialIcons name="bolt" size={20} color={Colors.primary} />
             </View>
             <Text style={styles.brandText}>
-              EcoMove <Text style={{ color: Colors.primary }}>{SERVICE_INFO[service].reqTitle}</Text>
+              EcoDrive <Text style={{ color: Colors.primary }}>{SERVICE_INFO[service].reqTitle}</Text>
             </Text>
           </Pressable>
         </View>
